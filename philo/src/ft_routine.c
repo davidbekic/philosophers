@@ -6,7 +6,7 @@
 /*   By: dbekic <dbekic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 19:21:47 by dbekic            #+#    #+#             */
-/*   Updated: 2022/10/23 21:07:19 by dbekic           ###   ########.fr       */
+/*   Updated: 2022/10/29 15:59:02 by dbekic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_routine(void *inp_data)
 		usleep(5000);
 	if (index != 1)
 		usleep(100);
-	while (data->max_eat_count < data->phil_num)
+	while (data->max_eat_count < data->phil_num && !data->dead)
 	{
 		ft_eat(data, index);
 		usleep(1000);

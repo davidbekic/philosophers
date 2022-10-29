@@ -6,7 +6,7 @@
 /*   By: dbekic <dbekic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 21:58:40 by dbekic            #+#    #+#             */
-/*   Updated: 2022/10/23 21:40:16 by dbekic           ###   ########.fr       */
+/*   Updated: 2022/10/29 15:53:43 by dbekic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	ft_eat(t_data *data, int index)
 	eaten = 0;
 	forks[0] = ft_decide_left_fork(data, index);
 	forks[1] = ft_decide_right_fork(data, index);
-	while ((!eaten))
+	while ((!eaten) && !data->dead)
 	{
 		ft_hold_up(data, index, 0);
 		if (data->dead)
